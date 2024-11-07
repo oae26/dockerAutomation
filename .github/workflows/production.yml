@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }} # Do not fill in here; set it in your GitHub repo settings
           password: ${{ secrets.DOCKERHUB_TOKEN }}    # Do not fill in here; set it in your GitHub repo settings
           run:
-            echo ${secrets.DOCKERHUB_TOKEN}          
+            echo ${{secrets.DOCKERHUB_TOKEN}}          
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
